@@ -1,0 +1,29 @@
+{% load static %}
+
+<html>
+  <head>
+    <title>Meu Blog</title>
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <h1><a href="/">Django Girls Blog</a></h1>
+      </div>
+    </header>
+
+    <div class="content container">
+      <div class="row">
+        <div class="col-md-8">{% block content %} {% endblock %}</div>
+      </div>
+    </div>
+  </body>
+</html>
